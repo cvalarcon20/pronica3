@@ -17,11 +17,19 @@ body{
     margin-right: 40px;
 }
 
-.navbar {
+.fa-bars{
+    color:$bg-letras;
+}
+
+.navbar { 
     width: 100%;
     height: 90px;
     background-color:$bg-principal;
 
+   .navbar-brand{
+       width: 275px;
+       height: 80px;
+   }
 
     .nav-link {
         color: $bg-letras;
@@ -37,6 +45,7 @@ body{
 
         a {
             color:$bg-letras;
+            
         }
         .dropdown-item{
             &:hover{

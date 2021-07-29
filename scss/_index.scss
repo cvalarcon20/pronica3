@@ -2,10 +2,18 @@
 
 /* ////// SECCION 1 - BIENVENIDO CAROUSEL  ////// */
 
+
+
 .carousel-inner{
     margin-top: $margin-top-sections;
     margin-bottom: 30px; 
  
+    img{
+        width: 360px;
+        height: 600px;
+    }
+
+
     .carousel-caption{
         p{
             font-size: 1.3em;
@@ -29,47 +37,84 @@
             padding-top: 20px;
         }
     }
+
+
 }
 
 /* ////// SECCION 2 - ESPECIALISTAS EN ////// */
 
+
 .container__esp{
-    margin-top: $margin-top-sections;
-    background-color: $bg-seccion1;
-    width: $totalWidth;
-    height: 550px;
+    @extend %marginSection;
+    background-color:$bg-seccion1;
+    width: 100%;
 
-
-    .card-title{
-        font-size: large;
-        font-weight: 900;
-        text-align: center;
-
-        .card-text{
-            margin-top: 10px;
-            background-color: lightgreen;
-         }
-
-    }
-       
-    
-   .titulo__sections {
+    .titulo__sections{
         color:$bg-letras;
         font-size: 2.3em;
-        font-weight: 900;   
-        margin:10px 0px 40px 40px;
+        font-weight: 900;
+        margin:10px 0px 0px 40px;
         padding-top: 40px;
     }
 
+        .card{
+            margin-top:50px;
+        }
+
+        .card-title{
+            font-weight:900;
+            background-color:$bg-principal;   
+            text-align: center;
+            font-size: 1em;
+            color:$bg-letras;
+            text-transform:uppercase;
+    
+        }
+        .card-text{
+            color:$bg-letrecontraste;
+            font-weight:800;   
+            
+        
+        }  
+
+
+        .btn {
+            background-color:$bg-principal;
+            border: none;
+        }
+
+        .btn:hover{
+            background-color: $bg-principal;
+
+        }
+}
+
+
+
+/* ////// SECCION PROD - TITULO  ////// */
+.titulo{
+    h1{
+        font-weight: 900;
+    }
+    h2{
+        font-weight: 900;
+        text-align: center;
+        padding:5px;
+
+    }
 }
 
 
 
 /* ////// SECCION 3 - QUIENES SOMOS ////// */
 
+.section{
+    @extend %marginSection;
+}
+
 .container__seccion {
     background:$bg-seccion2;
-    margin-top: $margin-top-sections;
+
    
      
 
@@ -138,11 +183,21 @@
 
 }
 
-/* ////// SECCION 5 - REPRESENTANTES  by GRID ////// */
+/* ////// SECCION 5 - REPRESENTANTES  ////// */
 
 .card-deck{
         background-color: $bg-seccion1;
+        p{
+        text-align: left;
+        color:$bg-letrecontraste;
+        }
 
+        h4{
+            color:$bg-letrecontraste;
+            font-weight: 600;
+        
+        }
+        
 }
 
 
@@ -172,7 +227,26 @@
         }
 }
 
+/* ////// SECCION  WHATSAPP ////// */
 
+.float {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 72px;
+    right: 50px;
+    background-color: #01B32B;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 34px;
+    z-index: 1;
+
+    &:hover{
+        color: $bg-principal;
+    }
+
+}
 
 /* ////// SECCION  FOOTER ////// */
 
@@ -180,8 +254,7 @@
     margin-top: 100px;
 
     #hr1{
-        width: 90px;
-        height: 2px;
+        @extend %footer;
     }
 
     #hr2{
@@ -190,12 +263,12 @@
     }
 
     #hr3{
-        width: 90px;
-        height: 2px;
+        @extend %footer; 
     }
 
-    h6, p, li {
+    h6, p, li, a  {
         color:$bg-letras;
     }
+
 
 }

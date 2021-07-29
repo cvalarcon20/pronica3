@@ -28,3 +28,20 @@ background-position: center;
     width: 100%;
     height: 50px;
 }
+
+%textcard{
+margin-top: 10px;
+font-size: large;
+font-weight: 900;
+text-align: center;
+}
+
+%marginSection{
+    margin-top: $margin-top-sections;
+    margin-bottom: $margin-top-sections;
+}
+
+%footer{
+    width: 90px;
+    height: 2px;
+}
