@@ -44,49 +44,136 @@
 /* ////// SECCION 2 - ESPECIALISTAS EN ////// */
 
 
-.container__esp{
-    @extend %marginSection;
-    background-color:$bg-seccion1;
-    width: 100%;
+.center{
+  height:100vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .titulo__sections{
-        color:$bg-letras;
-        font-size: 2.3em;
-        font-weight: 900;
-        margin:10px 0px 0px 40px;
-        padding-top: 40px;
+/* End Non-Essential  */
+
+.property-card{
+  margin-top: 200px;
+  height:18em;
+  width:13em;
+  gap: 10px;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  @extend %especialist_transition;
+  border-radius:16px;
+  overflow:hidden;
+  
+
+
+    .property-image1{
+    background-image:url('/images/ups.jpg');
+    @extend %especialistas;
     }
 
-        .card{
-            margin-top:50px;
+    .property-image2{
+        background-image:url('/images/inversor.jpg');
+        @extend %especialistas;
+    }
+
+    .property-image3{
+        background-image:url('/images/recti.jpg');
+        @extend %especialistas;
+    }
+
+    .property-image4{
+        background-image:url('/images/bate.jpg');
+        @extend %especialistas;
+    }
+
+    .property-image5{
+        background-image:url('/images/data2.jpg');
+        @extend %especialistas;
+    }
+
+    .property-image6{
+        background-image:url('/images/aires.jpg');
+        @extend %especialistas;
+    }
+
+    .property-description{
+    background-color: #FAFAFC;
+    height:12em;
+    width:14em;
+    position:absolute;
+    bottom:0em;
+    @extend %especialist_transition;
+    padding: 0.5em ;
+    text-align:left;
+
+        h5{
+        margin:0px;
+        font-size:1.4em;
+        font-weight:900;
         }
-
-        .card-title{
-            font-weight:900;
-            background-color:$bg-principal;   
-            text-align: center;
-            font-size: 1em;
-            color:$bg-letras;
-            text-transform:uppercase;
-    
+      
+        p{
+        font-size:12px;
+        margin-top: 20px;
+        font-weight:800;
         }
-        .card-text{
-            color:$bg-letrecontraste;
-            font-weight:800;   
-            
-        
-        }  
+ 
+
+    }
+
+  
 
 
-        .btn {
-            background-color:$bg-principal;
-            border: none;
-        }
 
-        .btn:hover{
-            background-color: $bg-principal;
 
-        }
+}
+
+/* Bottom Card Section */
+
+
+/* Social Icons */
+
+.property-social-icons
+{
+  width:1em;
+  height:1em;
+  background-color:black;
+  position:absolute;
+  bottom:1em;
+  left:1em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Property Cards Hover States */
+
+.property-card:hover .property-description
+{
+  height:0em;
+  padding:0px 1em;
+}
+.property-card:hover .property-image
+{
+  height:18em;
+}
+
+.property-card:hover .property-social-icons
+{
+  background-color:white;
+}
+
+.property-card:hover .property-social-icons:hover
+{
+  background-color:blue;
+  cursor:pointer;
 }
 
 
@@ -100,7 +187,6 @@
         font-weight: 900;
         text-align: center;
         padding:5px;
-
     }
 }
 

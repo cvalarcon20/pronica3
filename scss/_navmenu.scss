@@ -31,6 +31,13 @@ body{
        height: 80px;
    }
 
+   .navbar-nav{
+    margin-left: 30px;   
+    background-color:$bg-principal;
+    width: 80%;
+   }
+
+
     .nav-link {
         color: $bg-letras;
         margin: 10px;
